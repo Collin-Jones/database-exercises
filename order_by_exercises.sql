@@ -6,7 +6,7 @@ FROM employees
 WHERE first_name IN ('Irena', 'Vidya', 'Maya');
 order by last_name desc, first_name desc;
 
-SELECT count(emp_no)
+SELECT *
 FROM employees
 WHERE last_name LIKE 'E%';
 order by emp_no desc;
