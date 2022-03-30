@@ -6,9 +6,7 @@ FROM employees
 ORDER BY last_name desc
 limit 10;
 
-SELECT *
-FROM employees
-WHERE hire_date LIKE '%199'
-AND birth_date LIKE '%12-25%'
-ORDER BY birth_date, hire_date desc
+SELECT emp_no, salary
+FROM salaries
+ORDER BY salary desc
 limit 5 offset 45;
