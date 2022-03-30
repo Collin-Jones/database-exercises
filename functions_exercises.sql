@@ -40,7 +40,7 @@ FROM employees
 WHERE last_name LIKE '%E'
   AND last_name LIKE 'E%';
 
-SELECT first_name, last_name, date(curdate(), hire_date) as 'date'
+SELECT first_name, last_name, datediff(curdate(), hire_date) as 'datediff'
 FROM employees
 WHERE hire_date LIKE '%199%'
   AND last_name LIKE '%12-25%';
