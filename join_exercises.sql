@@ -23,7 +23,7 @@ ORDER BY d.dept_name;
 SELECT t.title as 'Title', COUNT(t.emp_no) as 'Count'
 FROM dept_emp as d
          JOIN titles t on d.emp_no = t.emp_no
-WHERE to_date LIKE '9999-01-01'
+WHERE t.to_date LIKE '9999-01-01'
   AND d.dept_no LIKE 'd009'
 GROUP BY t.title;
 
@@ -37,4 +37,4 @@ FROM employees as e
               ON e.emp_no = s.emp_no
 WHERE to_date LIKE '9999-01-01' AND
       s.to_date > curdate()
-ORDER BY d.dept_name()
+ORDER BY d.dept_name;
